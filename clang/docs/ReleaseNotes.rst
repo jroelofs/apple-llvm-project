@@ -1207,6 +1207,10 @@ Arm and AArch64 Support
     * Arm Neoverse-N3 (neoverse-n3).
     * Arm Neoverse-V3 (neoverse-v3).
     * Arm Neoverse-V3AE (neoverse-v3ae).
+- Clang now diagnoses cases where a hard-float ABI would require passing
+  arguments and/or return values in floating point registers on targets that do
+  not have FP registers, e.g. via ``-mgeneral-regs-only`` or
+  ``-march=...+nofp``.
 
 Android Support
 ^^^^^^^^^^^^^^^
